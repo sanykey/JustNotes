@@ -1,0 +1,15 @@
+{
+  "line_numbers": false,
+  "margin": 20,
+  "word_wrap": true,
+  "wrap_width": 100,
+  //"draw_centered": true,
+  "rulers": [],
+  "spell_check": false,
+  "highlight_line": true,
+  "scroll_past_end": false,
+  "draw_indent_guides": false,
+  "fold_buttons": false,
+  "drag_text": false,
+  "gutter": false
+}

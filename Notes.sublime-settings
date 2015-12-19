@@ -1,0 +1,44 @@
+{
+  "root": "~/Dropbox/Notes/",
+  "archive_dir": ".archive",
+  "jotter_color_scheme": "Packages/JustNotes/Color Schemes/JustNotes-Default.hidden-tmTheme",
+  "jotter_date_format" :"%d %b %Y",
+  "jotter_time_format": "%I:%M %p",
+  "note_save_extension": "note",
+  "note_file_extensions": ["md","note"],
+  "enable_yaml": false,
+  "note_yaml" : ["tags"],
+  "list_options" : {
+  	"display_modified_date": false,
+  	"display_folder": false,
+  	"display_full_path": false
+  },
+  // Tasks:
+  "open_tasks_bullet": "☐", // options: - | ❍ | ❑ | ■ | □ | ☐ | ▪ | ▫ | – | — | ≡ | → | › | [ ]
+  "done_tasks_bullet": "✔", // options: + | ✓ | ✔ | √ | [x]
+  "cancelled_tasks_bullet": "✘", // options: x | ✘ | [-]
+  "before_tasks_bullet_margin": 1,
+  "date_format": "(%y-%m-%d %H:%M)",
+  "done_tag": true, // related to @cancelled as well
+  "project_tag": true, // if true - postfix archived task with project tag, if false - prefix
+  "archive_name": "Archive:", // make sure it is the unique project name within your todo files
+  "new_on_top": true, // how to sort archived tasks
+  "draw_indent_guides": false,
+  "line_numbers": true,
+  "gutter": true,
+  "margin": 2,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "use_tab_stops": true,
+  "match_brackets": true,
+  "fold_buttons": true,
+  "fade_fold_buttons": false,
+  "extensions":
+  [
+    "TODO",
+    "todo",
+    "todolist",
+    "taskpaper",
+    "tasks"
+  ]
+}

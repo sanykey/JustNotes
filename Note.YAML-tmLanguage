@@ -1,0 +1,1670 @@
+fileTypes:
+- note
+name: Just Note
+patterns:
+# куски кода
+- begin: (\[)(actionscript|as)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Actionscript
+  end: (\[)(\\?\/?(end|actionscript|as))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.actionscript.2
+- begin: (\[)(applescript)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Applescript
+  end: (\[)(\\?\/?(end|applescript))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.applescript
+- begin: (\[)(asp|asa)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: ASP
+  end: (\[)(\\?\/?(end|asp|asa))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.asp
+- begin: (\[)(c)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: C
+  end: (\[)(\\?\/?(end|c))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.c
+- begin: (\[)(cs|c#|csharp)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: C#
+  end: (\[)(\\?\/?(end|cs|c#|csharp))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.cs
+- begin: (\[)(c\+\+|cpp|cc|cxx)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: C++
+  end: (\[)(\\?\/?(end|c\+\+|cpp|cc|cxx))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.c++
+- begin: (\[)(clj|clojure)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Clojure
+  end: (\[)(\\?\/?(end|clj|clojure))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.clojure
+- begin: (\[)(css)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: CSS
+  end: (\[)(\\?\/?(end|css))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.css
+- begin: (\[)(di)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: D
+  end: (\[)(\\?\/?(end|di))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.d
+- begin: (\[)(erl|hrl|Emakefile|emakefile|)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Erlang
+  end: (\[)(\\?\/?(end|erl|hrl|Emakefile|emakefile|))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.erlang
+- begin: (\[)(go|golang)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Go
+  end: (\[)(\\?\/?(end|go|golang))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.go
+- begin: (\[)(groovy|gvy)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Groovy
+  end: (\[)(\\?\/?(end|groovy|gvy))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.groovy
+- begin: (\[)(hs|haskell)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Haskell
+  end: (\[)(\\?\/?(end|hs|haskell))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.haskell
+- begin: (\[)(html|htm|shtml|xhtml|phtml|inc|tmpl|tpl|ctp)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: HTML
+  end: (\[)(\\?\/?(end|html|htm|shtml|xhtml|phtml|inc|tmpl|tpl|ctp))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: text.html.basic
+- begin: (\[)(java|bsh)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Java
+  end: (\[)(\\?\/?(end|java|bsh))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.java
+- begin: (\[)(js|jsx|htc|javascript)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Javascript
+  end: (\[)(\\?\/?(end|js|jsx|htc|javascript))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.js
+- begin: (\[)(lua)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Lua
+  end: (\[)(\\?\/?(end|lua))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.lua
+- begin: (\[)(gnumakefile|makefile|makefile|ocamlmakefile|make)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Makefile
+  end: (\[)(\\?\/?(end|gnumakefile|makefile|makefile|ocamlmakefile|make))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.makefile
+- begin: (\[)(mdown|markdown|markdn|md)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Markdown
+  end: (\[)(\\?\/?(end|mdown|markdown|markdn|md))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: text.html.markdown
+- begin: (\[)(matlab)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Matlab
+  end: (\[)(\\?\/?(end|matlab))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.matlab
+- begin: (\[)(objective-c|objc|m|h)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Objective-c
+  end: (\[)(\\?\/?(end|objective-c|objc|m|h))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.objc
+- begin: (\[)(ocaml|ml|mli)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Ocaml
+  end: (\[)(\\?\/?(end|ocaml|ml|mli))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.ocaml
+- begin: (\[)(p|pas|pascal)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Pascal
+  end: (\[)(\\?\/?(end|p|pas|pascal))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.pascal
+- begin: (\[)(pm|pl|pod|t|perl)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Perl
+  end: (\[)(\\?\/?(end|pm|pl|pod|t|perl))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.perl
+- begin: (\[)(php)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: PHP
+  end: (\[)(\\?\/?(end|php))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.php
+- begin: (\[)(cpy|py|python|rpy|pyw)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Python
+  end: (\[)(\\?\/?(end|cpy|py|python|rpy|pyw))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.python
+- begin: (\[)(r|s|rprofile)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: R
+  end: (\[)(\\?\/?(end|r|s|rprofile))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.r
+- begin: (\[)(re|regex|regexp)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Regex
+  end: (\[)(\\?\/?(end|re|regex|regexp))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.regexp
+- begin: (\[)(rb|rbx|rjs|ruby|Rakefile|rake|cgi|fcgi|gemspec|irbrc|capfile|gemfile)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Ruby
+  end: (\[)(\\?\/?(end|rb|rbx|rjs|ruby|Rakefile|rake|cgi|fcgi|gemspec|irbrc|capfile|gemfile))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.ruby
+- begin: (\[)(scala)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Scala
+  end: (\[)(\\?\/?(end|scala))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.scala
+- begin: (\[)(sh|bash|zsh|bashrc)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: Shell
+  end: (\[)(\\?\/?(end|sh|bash|zsh|bashrc))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.shell
+- begin: (\[)(sql|dml|ddl|mysql)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: SQL
+  end: (\[)(\\?\/?(end|sql|dml|ddl|mysql))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.sql
+- begin: (\[)(tcl)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: TCL
+  end: (\[)(\\?\/?(end|tcl))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.tcl
+- begin: (\[)(tex|latex|sty|cls)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: TeX
+  end: (\[)(\\?\/?(end|tex|latex|sty|cls))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: text.tex
+- begin: (\[)(xml|tld|jsp|pt|cpt|dtml|rss|opml)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: XML
+  end: (\[)(\\?\/?(end|xml|tld|jsp|pt|cpt|dtml|rss|opml))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: text.xml
+- begin: (\[)(xsl|xslt)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: XSL
+  end: (\[)(\\?\/?(end|xsl|xslt))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: text.xml.xsl
+- begin: (\[)(yaml|yml)(\])
+  beginCaptures:
+    '1':
+      name: string.regexp.notes
+    '2':
+      name: markup.bold.notes
+    '3':
+      name: string.regexp.notes
+  comment: YAML
+  end: (\[)(\\?\/?(end|yaml|yml))(\])
+  endCaptures:
+    '1':
+      name: string.regexp.notes
+    '3':
+      name: markup.bold.notes
+    '4':
+      name: string.regexp.notes
+  patterns:
+  - include: source.yaml
+
+
+
+
+
+- begin: "(?x)^\n        (?= [ ]{,3}>\n        | ([ ]{4}|\\t)(?!$)\n        | [#]{1}\\\
+    s*+\n        | [#]{2}\\s*+   # these seems a bit stupid, but it's the only\n \
+    \       | [#]{3}\\s*+   # way I found to add heading number to the scope\n   \
+    \     | [#]{4}\\s*+   # sublime does not support dynamic scope names\n       \
+    \ | [#]{5}\\s*+   # like textmate does! it's a bummer!\n        | [#]{6}\\s*+\n\
+    \        | [ ]{,3}(?<marker>[-*_])([ ]{,2}\\k<marker>){2,}[ \\t]*+$\n        |\
+    \ [ ]{,3}(([\\|\\+])([^\\|\\n]+)){2,}([\\|\\+]+)[ \\t]*$  # table\n        )"
+  comment: "\n        We could also use an empty end match and set\n        applyEndPatternLast,\
+    \ but then we must be sure that the begin\n        pattern will only match stuff\
+    \ matched by the sub-patterns.\n      "
+  end: "(?x)^\n        (?! [ ]{,3}>\n        | ([ ]{4}|\\t)\n        | [#]{1,6}\\\
+    s*+\n        | [ ]{,3}(?<marker>[-*_])([ ]{,2}\\k<marker>){2,}[ \\t]*+$\n    \
+    \    | [ ]{,3}(([\\|\\+])([^\\|\\n]+)){2,}([\\|\\+]+)[ \\t]*$ # table\n      \
+    \  )"
+  name: meta.block-level.markdown
+  patterns:
+  - include: '#block_quote'
+  # - include: '#block_raw'
+  - include: '#headings'
+  - include: '#separator'
+  - include: '#table'
+
+
+- begin: ^(?=<(p|div|section|address|audio|video|canvas|figcaption|figure|output|article|aside|header|footer|main|h[1-6]|blockquote|pre|table|dd|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del)\b[^>]*>)(?!.*?</\1>)
+  comment: "\n        Markdown formatting is disabled inside block-level tags.\n \
+    \     "
+  end: (?<=^</\1>$\n)
+  name: meta.disable-markdown
+  patterns:
+  - include: text.html.basic
+
+
+- begin: ^(?=<(p|div|section|address|audio|video|canvas|figcaption|figure|output|article|aside|header|footer|main|h[1-6]|blockquote|pre|table|dd|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del)\b[^>]*>)
+  comment: Same rule but for one line disables.
+  end: $\n?
+  name: meta.disable-markdown
+  patterns:
+  - include: text.html.basic
+
+
+- captures:
+    '1':
+      name: punctuation.definition.constant.markdown
+    '10':
+      name: punctuation.definition.string.end.markdown
+    '11':
+      name: string.other.link.description.title.markdown
+    '12':
+      name: punctuation.definition.string.begin.markdown
+    '13':
+      name: punctuation.definition.string.end.markdown
+    '2':
+      name: constant.other.reference.link.markdown
+    '3':
+      name: punctuation.definition.constant.markdown
+    '4':
+      name: punctuation.separator.key-value.markdown
+    '5':
+      name: punctuation.definition.link.markdown
+    '6':
+      name: markup.underline.link.markdown
+    '7':
+      name: punctuation.definition.link.markdown
+    '8':
+      name: string.other.link.description.title.markdown
+    '9':
+      name: punctuation.definition.string.begin.markdown
+  match: "(?x:\n        \\s*           # Leading whitespace\n        (\\[)(.+?)(\\\
+    ])(:)    # Reference name\n        [ \\t]*          # Optional whitespace\n  \
+    \      (<?)(\\S+?)(>?)      # The url\n        [ \\t]*          # Optional whitespace\n\
+    \        (?:\n            ((\\().+?(\\)))   # Match title in quotes\u2026\n  \
+    \        | ((['\"]).+?(['\"]))   # or in parens.\n        )?            # Title\
+    \ is optional\n        [ \\t]*            # Optional whitespace\n        $\n \
+    \     )"
+  name: meta.link.reference.def.markdown
+
+
+- begin: ^(!!!)[ \t]+(hint|tip|HINT|TIP|Hint|Tip)(?:[ \t]+(.+))?[ \t]*\n
+  beginCaptures:
+    '0':
+      name: markup.admonition.header.markdown
+    '1':
+      name: punctuation.definition.admonition.markdown
+    '2':
+      name: entity.name.admonition.markdown
+    '3':
+      name: string.other.admonition.title.markdown
+  end: ^$
+  name: markup.admonition.markdown.hint
+  patterns:
+  - include: '#admonition'
+
+
+- begin: ^(!!!)[ \t]+(warning|caution|Warning|Caution|WARNING|CAUTION)(?:[ \t]+(.+))?[
+    \t]*\n
+  beginCaptures:
+    '0':
+      name: markup.admonition.header.markdown
+    '1':
+      name: punctuation.definition.admonition.markdown
+    '2':
+      name: entity.name.admonition.markdown
+    '3':
+      name: string.other.admonition.title.markdown
+  end: ^$
+  name: markup.admonition.markdown.warning
+  patterns:
+  - include: '#admonition'
+
+
+- begin: ^(!!!)[ \t]+(danger|error|Danger|Error|DANGER|ERROR)(?:[ \t]+(.+))?[
+    \t]*\n
+  beginCaptures:
+    '0':
+      name: markup.admonition.header.markdown
+    '1':
+      name: punctuation.definition.admonition.markdown
+    '2':
+      name: entity.name.admonition.markdown
+    '3':
+      name: string.other.admonition.title.markdown
+  end: ^$
+  name: markup.admonition.markdown.danger
+  patterns:
+  - include: '#admonition'
+
+
+- begin: ^(!!!)[ \t]+(attention|Attention|ATTENTION)(?:[ \t]+(.+))?[ \t]*\n
+  beginCaptures:
+    '0':
+      name: markup.admonition.header.markdown
+    '1':
+      name: punctuation.definition.admonition.markdown
+    '2':
+      name: entity.name.admonition.markdown
+    '3':
+      name: string.other.admonition.title.markdown
+  end: ^$
+  name: markup.admonition.markdown.attention
+  patterns:
+  - include: '#admonition'
+
+
+- begin: ^(!!!)[ \t]+(\w+)(?:[ \t]+(.+))?[ \t]*\n
+  beginCaptures:
+    '0':
+      name: markup.admonition.header.markdown
+    '1':
+      name: punctuation.definition.admonition.markdown
+    '2':
+      name: entity.name.admonition.markdown
+    '3':
+      name: string.other.admonition.title.markdown
+  end: ^[ \t]{0,3}$
+  name: markup.admonition.markdown
+  patterns:
+  - include: '#admonition'
+
+
+- captures:
+    '1':
+      name: punctuation.definition.abbreviation.markdown
+    '2':
+      name: punctuation.definition.abbreviation.begin.markdown
+    '3':
+      name: meta.abbreviation.constant.markdown
+    '4':
+      name: punctuation.definition.abbreviation.end.markdown
+    '5':
+      name: punctuation.definition.abbreviation.markdown
+    '6':
+      name: meta.abbreviation.def.string.markdown
+  match: ^(\*)(\[)(.+?)(\])(:)(.+)$
+  name: meta.abbreviation.def.markdown
+
+
+- captures:
+    '1':
+      name: punctuation.definition.attr_list.markdown
+    '3':
+      name: punctuation.definition.attr_list.markdown
+  match: ^(\{:)\s*(#[\w-]+\s+|\.[\w-]+\s+|[\w-]+=["'].+?["']\s+)+\s*(\})$
+  name: meta.attr_list.markdown
+
+
+- begin: ^(?=\S|[ ]{1,3})(?![=-]{3,}(?=$))
+  end: "^(?:\\s*$|(?=[ ]{,3}>)|(?=```|~~~)|(?=\\*\\[.+?\\]:.+$)|(?=\\{:.+?\\}\\s*$)|(?=[\
+    \ ]{0,3}([*+-\u2714\u2718\u2610])(?=\\s)))|(?=[ \\t]*\\n)(?<=^===|^====|=====|^---|^----|-----)[\
+    \ \\t]*\\n|(?=^#)"
+  name: meta.paragraph.markdown
+  patterns:
+  - include: '#inline'
+  - include: text.html.basic
+  - captures:
+      '1':
+        name: punctuation.definition.heading.markdown
+    match: ^(={3,})(?=[ \t]*$)
+    name: markup.heading.1.markdown.note
+  - captures:
+      '1':
+        name: punctuation.definition.heading.markdown
+    match: ^(-{3,})(?=[ \t]*$)
+    name: markup.heading.2.markdown.note
+
+
+- match: ^\s*$
+  name: meta.empty_line.markdown
+
+
+repository:
+  admonition:
+    patterns:
+    - applyEndPatternLast: 1
+      begin: \G([ ]{4}|\t)
+      end: (?<=\n)
+      name: markup.admonition.body.markdown
+      patterns:
+      - begin: \G[ ]{0,3}(>)[ ]?
+        beginCaptures:
+          '1':
+            name: punctuation.definition.blockquote.markdown
+        end: "(?x)\\G([ ]{4,}|\\t)?\n              (?= \\s*$\n              | [ ]{,3}(?<marker>[-*_])([\
+          \ ]{,2}\\k<marker>){2,}[ \\t]*+$\n              | [ ]{,3}>\n           \
+          \   )"
+        name: markup.quote.markdown
+        patterns:
+        - include: $self
+        - include: '#inline'
+        # - include: '#block_raw'
+        - include: '#headings'
+        - include: '#separator'
+        - begin: "(?x)\n                    \\G[ ]{0,3}([*+-])([ ]\\[([ xX\u2718\u2714\
+            ])\\])?(?=\\s) |\n                    \\G[ ]{0,3}([0-9]+)(\\.)([ ]\\[([\
+            \ xX\u2718\u2714])\\])?(?=\\s) |\n                    \\G[ ]{0,3}(?:(\u2718\
+            )|(\u2714)|(\u2610)){1}(?=\\s)\n                  "
+          captures:
+            '1':
+              name: punctuation.definition.list_item.markdown
+            '10':
+              name: punctuation.definition.list_item.todo.pending.markdown
+            '2':
+              name: markup.checkbox.markdown
+            '3':
+              name: markup.checkbox.checked_symbol.markdown
+            '4':
+              name: punctuation.definition.list_item.markdown punctuation.definition.list_item.number.markdown
+            '5':
+              name: punctuation.definition.list_item.markdown
+            '6':
+              name: markup.checkbox.markdown
+            '7':
+              name: markup.checkbox.checked_symbol.markdown
+            '8':
+              name: punctuation.definition.list_item.todo.cancelled.markdown
+            '9':
+              name: punctuation.definition.list_item.todo.done.markdown
+          end: (?<=\n)
+          name: markup.list
+      - begin: "(?x)\n                \\G[ ]{0,3}([*+-])([ ]\\[([ xX\u2718\u2714])\\\
+          ])?(?=\\s) |\n                \\G[ ]{0,3}([0-9]+)(\\.)([ ]\\[([ xX\u2718\
+          \u2714])\\])?(?=\\s) |\n                \\G[ ]{0,3}(?:(\u2718)|(\u2714)|(\u2610\
+          )){1}(?=\\s)\n              "
+        captures:
+          '1':
+            name: punctuation.definition.list_item.markdown
+          '10':
+            name: punctuation.definition.list_item.todo.pending.markdown
+          '2':
+            name: markup.checkbox.markdown
+          '3':
+            name: markup.checkbox.checked_symbol.markdown
+          '4':
+            name: punctuation.definition.list_item.markdown punctuation.definition.list_item.number.markdown
+          '5':
+            name: punctuation.definition.list_item.markdown
+          '6':
+            name: markup.checkbox.markdown
+          '7':
+            name: markup.checkbox.checked_symbol.markdown
+          '8':
+            name: punctuation.definition.list_item.todo.cancelled.markdown
+          '9':
+            name: punctuation.definition.list_item.todo.done.markdown
+        end: (?<=\n)
+        name: markup.list
+        patterns:
+        - include: '#list-paragraph'
+      # - include: '#block_raw'
+      - include: '#table'
+      - include: '#headings'
+      - include: '#separator'
+      - include: '#inline'
+      - include: text.html.basic
+  ampersand:
+    comment: "\n        Markdown will convert this for us. We match it so that the\n\
+      \        HTML grammar will not mark it up as invalid.\n      "
+    match: '&(?!([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+);)'
+    name: meta.other.valid-ampersand.markdown
+  altHeader:
+    comment: Заголовки с двоедочием
+    match: (^\s*[^\s=#].*\:)$
+    name: markup.quote.markdown
+  brackets:
+    comment: Скобочки
+    match: ([\(\)])
+    name: entity.name.function
+  uList:
+    comment: Не нумерованный список
+    match: ^\s*(-|\+|\*|\d+\.)\s?(?![\s-]+)
+    captures:
+      '1':
+        name: entity.name.function
+  block_quote:
+    begin: \G[ ]{,3}(>)[ ]?
+    beginCaptures:
+      '1':
+        name: punctuation.definition.blockquote.markdown
+    comment: "\n        We terminate the block quote when seeing an empty line, a\n\
+      \        separator or a line with leading > characters. The latter is\n    \
+      \    to \u201Creset\u201D the quote level for quoted lines.\n      "
+    end: "(?x)^\n        (?= \\s*$\n        | [ ]{,3}(?<marker>[-*_])([ ]{,2}\\k<marker>){2,}[\
+      \ \\t]*+$\n        | [ ]{,3}>\n        )"
+    name: markup.quote.markdown
+    patterns:
+    - begin: "(?x)\\G\n            (?= [ ]{,3}>\n            )"
+      end: ^
+      patterns:
+      - include: '#block_quote'
+    - applyEndPatternLast: 1
+      begin: "(?x)\\G\n            (?= ([ ]{4}|\\t)\n            | [#]{1,6}\\s*+\n\
+        \            | [ ]{,3}(?<marker>[-*_])([ ]{,2}\\k<marker>){2,}[ \\t]*+$\n\
+        \            )"
+      end: ^
+      patterns:
+      # - include: '#block_raw'
+      - include: '#headings'
+      - include: '#separator'
+    - begin: "(?x)\\G\n            (?! $\n            | [ ]{,3}>\n            | ([\
+        \ ]{4}|\\t)\n            | [#]{1,6}\\s*+\n            | [ ]{,3}(?<marker>[-*_])([\
+        \ ]{,2}\\k<marker>){2,}[ \\t]*+$\n            )"
+      end: $|(?<=\n)
+      patterns:
+      - captures:
+          '1':
+            name: punctuation.definition.list_item.markdown
+          '2':
+            name: markup.checkbox.markdown
+          '3':
+            name: markup.checkbox.checked_symbol.markdown
+          '4':
+            name: meta.paragraph.list.markdown
+          '5':
+            name: punctuation.definition.list_item.markdown punctuation.definition.list_item.number.markdown
+          '6':
+            name: punctuation.definition.list_item.markdown
+          '7':
+            name: markup.checkbox.markdown
+          '8':
+            name: markup.checkbox.checked_symbol.markdown
+          '9':
+            name: meta.paragraph.list.markdown
+        match: "(?x:\n                 \\G[ ]{,3}([*+-])[ ](\\[([ xX\u2718\u2714])\\\
+          ])(.+)$          # after an unordered list\n                |\\G[ ]{0,3}([0-9]+)(\\\
+          .)[ ](\\[([ xX\u2718\u2714])\\])(.+)$    # after an ordered list\n     \
+          \         )"
+        name: meta.paragraph.list.markdown
+      - captures:
+          '1':
+            name: punctuation.definition.list_item.markdown
+          '2':
+            name: meta.paragraph.list.markdown
+        match: \G[ ]{,3}([*+-])\s+(.+)$
+      - captures:
+          '1':
+            name: punctuation.definition.list_item.todo.done.markdown
+          '2':
+            name: meta.paragraph.list.todo.markdown
+        match: "\\G[ ]{,3}([\u2714])\\s+(.+)$"
+      - captures:
+          '1':
+            name: punctuation.definition.list_item.todo.cancelled.markdown
+          '2':
+            name: meta.paragraph.list.todo.markdown
+        match: "\\G[ ]{,3}([\u2718])\\s+(.+)$"
+      - captures:
+          '1':
+            name: punctuation.definition.list_item.todo.pending.markdown
+          '2':
+            name: meta.paragraph.list.todo.markdown
+        match: "\\G[ ]{,3}([\u2610])\\s+(.+)$"
+      - captures:
+          '1':
+            name: punctuation.definition.list_item.markdown punctuation.definition.list_item.number.markdown
+          '2':
+            name: punctuation.definition.list_item.markdown
+          '3':
+            name: meta.paragraph.list.markdown
+        match: \G[ ]{0,3}([0-9]+)(\.)\s+(.+)$
+      - include: '#inline'
+      - include: text.html.basic
+  block_raw:
+    match: \G([ ]{4}|\t).*$\n?
+    name: markup.raw.block.markdown
+  bold:
+    begin: "(?x)\n            (?<![a-zA-Z0-9])(\\*\\*|__)(?=\\S)                #\
+      \ Open\n            (?=\n              (\n                  <[^>]*+>       \
+      \      # HTML tags\n                | (?<raw>`+)([^`]|(?!(?<!`)\\k<raw>(?!`))`)*+\\\
+      k<raw>\n                                  # Raw\n                | \\\\[\\\\\
+      `*_{}\\[\\]()#.!+\\->]?+     # Escapes\n                | \\[\n            \
+      \    (\n                        (?<square>          # Named group\n        \
+      \              [^\\[\\]\\\\]       # Match most chars\n                    \
+      \      | \\\\.           # Escaped chars\n                          | \\[ \\\
+      g<square>*+ \\]    # Nested brackets\n                        )*+\n        \
+      \          \\]\n                  (\n                    (             # Reference\
+      \ Link\n                      [ ]?          # Optional space\n             \
+      \         \\[[^\\]]*+\\]       # Ref name\n                    )\n         \
+      \           | (             # Inline Link\n                      \\(       \
+      \     # Opening paren\n                        [ \\t]*+       # Optional whtiespace\n\
+      \                        <?(.*?)>?     # URL\n                        [ \\t]*+\
+      \       # Optional whtiespace\n                        (         # Optional\
+      \ Title\n                          (?<title>['\"])\n                       \
+      \   (.*?)\n                          \\k<title>\n                        )?\n\
+      \                      \\)\n                    )\n                  )\n   \
+      \             )\n                | (?!(?<=\\S)\\1).           # Everything besides\n\
+      \                                  # style closer\n              )++\n     \
+      \         (?<=\\S)\\1                # Close\n            )\n          "
+    captures:
+      '1':
+        name: punctuation.definition.bold.markdown
+    end: (?<=\S)(\1)
+    name: markup.bold.markdown
+    patterns:
+    - applyEndPatternLast: 1
+      begin: (?=<[^>]*?>)
+      end: (?<=>)
+      patterns:
+      - include: text.html.basic
+    - include: '#escape'
+    - include: '#ampersand'
+    - include: '#bracket'
+    - include: '#raw'
+    - include: '#italic'
+    - include: '#strikethrough'
+    - include: '#image-inline'
+    - include: '#link-inline'
+    - include: '#link-inet'
+    - include: '#link-email'
+    - include: '#image-ref'
+    - include: '#link-ref-literal'
+    - include: '#link-ref'
+    - include: '#link-internal'
+  bracket:
+    comment: "\n        Markdown will convert this for us. We match it so that the\n\
+      \        HTML grammar will not mark it up as invalid.\n      "
+    match: <(?![a-z/?\$!])
+    name: meta.other.valid-bracket.markdown
+  escape:
+    match: \\[-`*_#+.!(){}\[\]\\>]
+    name: constant.character.escape.markdown
+  heading1:
+    begin: \G(#{1})(?!#)[ \t]*(?=\S)
+    captures:
+      '1':
+        name: punctuation.definition.heading.1.markdown
+    contentName: entity.name.section.markdown
+    end: '[ \t]*(#*)\n?$'
+    name: markup.heading.1.markdown.note
+    patterns:
+    - include: '#inline'
+  heading2:
+    begin: \G(#{2})(?!#)\s*(?=\S)
+    captures:
+      '1':
+        name: punctuation.definition.heading.2.markdown
+    contentName: entity.name.section.markdown
+    end: '[ \t]*(#*)$\n?'
+    name: markup.heading.2.markdown.note
+    patterns:
+    - include: '#inline'
+  heading3:
+    begin: \G(#{3})(?!#)\s*(?=\S)
+    captures:
+      '1':
+        name: punctuation.definition.heading.3.markdown
+    contentName: entity.name.section.markdown
+    end: '[ \t]*(#*)$\n?'
+    name: markup.heading.3.markdown.note
+    patterns:
+    - include: '#inline'
+  heading4:
+    begin: \G(#{4})(?!#)\s*(?=\S)
+    captures:
+      '1':
+        name: punctuation.definition.heading.4.markdown
+    contentName: entity.name.section.markdown
+    end: '[ \t]*(#*)$\n?'
+    name: markup.heading.4.markdown.note
+    patterns:
+    - include: '#inline'
+  heading5:
+    begin: \G(#{5})(?!#)\s*(?=\S)
+    captures:
+      '1':
+        name: punctuation.definition.heading.5.markdown
+    contentName: entity.name.section.markdown
+    end: '[ \t]*(#*)$\n?'
+    name: markup.heading.5.markdown.note
+    patterns:
+    - include: '#inline'
+  heading6:
+    begin: \G(#{6})(?!#)\s*(?=\S)
+    captures:
+      '1':
+        name: punctuation.definition.heading.6.markdown
+    contentName: entity.name.section.markdown
+    end: '[ \t]*(#*)$\n?'
+    name: markup.heading.6.markdown.note
+    patterns:
+    - include: '#inline'
+  headings:
+    patterns:
+    - include: '#heading1'
+    - include: '#heading2'
+    - include: '#heading3'
+    - include: '#heading4'
+    - include: '#heading5'
+    - include: '#heading6'
+  image-inline:
+    captures:
+      '1':
+        name: punctuation.definition.string.begin.markdown
+      '10':
+        name: string.other.link.description.title.markdown
+      '11':
+        name: punctuation.definition.string.markdown
+      '12':
+        name: punctuation.definition.string.markdown
+      '13':
+        name: string.other.link.description.title.markdown
+      '14':
+        name: punctuation.definition.string.markdown
+      '15':
+        name: punctuation.definition.string.markdown
+      '16':
+        name: punctuation.definition.metadata.markdown
+      '2':
+        name: string.other.link.description.markdown
+      '4':
+        name: punctuation.definition.string.end.markdown
+      '5':
+        name: invalid.illegal.whitespace.markdown
+      '6':
+        name: punctuation.definition.metadata.markdown
+      '7':
+        name: punctuation.definition.link.markdown
+      '8':
+        name: markup.underline.link.image.markdown
+      '9':
+        name: punctuation.definition.link.markdown
+    match: "(?x:\n        \\!              # Images start with !\n        (\\[)((?<square>[^\\\
+      [\\]\\\\]|\\\\.|\\[\\g<square>*+\\])*+)(\\])\n                      # Match\
+      \ the link text.\n        ([ ])?            # Space not allowed\n        (\\\
+      ()            # Opening paren for url\n          (<?)(\\S+?)(>?)      # The\
+      \ url\n          [ \\t]*          # Optional whitespace\n          (?:\n   \
+      \           ((\\().+?(\\)))   # Match title in parens\u2026\n            | ((\"\
+      ).+?(\"))   # or in quotes.\n          )?            # Title is optional\n \
+      \         \\s*           # Optional whitespace\n        (\\))\n       )"
+    name: meta.image.inline.markdown
+  image-ref:
+    captures:
+      '1':
+        name: punctuation.definition.string.begin.markdown
+      '2':
+        name: string.other.link.description.markdown
+      '4':
+        name: punctuation.definition.string.begin.markdown
+      '5':
+        name: punctuation.definition.constant.markdown
+      '6':
+        name: constant.other.reference.link.markdown
+      '7':
+        name: punctuation.definition.constant.markdown
+    match: \!(\[)((?<square>[^\[\]\\]|\\.|\[\g<square>*+\])*+)(\])[ ]?(\[)(.*?)(\])
+    name: meta.image.reference.markdown
+  inline:
+    patterns:
+    - include: '#escape'
+    - include: '#ampersand'
+    - include: '#bracket'
+    - include: '#raw'
+    - include: '#bold'
+    - include: '#italic'
+    - include: '#strikethrough'
+    - include: '#line-break'
+    - include: '#image-inline'
+    - include: '#link-inline'
+    - include: '#link-inet'
+    - include: '#link-email'
+    - include: '#link-internal'
+    - include: '#image-ref'
+    - include: '#link-ref-literal'
+    - include: '#link-ref'
+    - include: '#note-tag'
+    - include: '#note-tag-begin'
+    - include: '#altHeader'
+    - include: '#uList'
+    - include: '#tag-critical'
+    - include: '#tag-high'
+    - include: '#tag-low'
+    - include: '#tag'
+    - include: '#tag-today'
+    - include: '#todoCompleted'
+    - include: '#todoCancelled'
+    - include: '#todoPending'
+  italic:
+    begin: "(?x)\n            (?<![a-zA-Z0-9])(\\*)(?=\\S)               # Open\n\
+      \            (?=\n              (\n                  <[^>]*+>             #\
+      \ HTML tags\n                | (?<raw>`+)([^`]|(?!(?<!`)\\k<raw>(?!`))`)*+\\\
+      k<raw>\n                                  # Raw\n                | \\\\[\\\\\
+      `*_{}\\[\\]()#.!+\\->]?+     # Escapes\n                | \\[\n            \
+      \    (\n                        (?<square>          # Named group\n        \
+      \              [^\\[\\]\\\\]       # Match most chars\n                    \
+      \      | \\\\.           # Escaped chars\n                          | \\[ \\\
+      g<square>*+ \\]    # Nested brackets\n                        )*+\n        \
+      \          \\]\n                  (\n                    (             # Reference\
+      \ Link\n                      [ ]?          # Optional space\n             \
+      \         \\[[^\\]]*+\\]       # Ref name\n                    )\n         \
+      \           | (             # Inline Link\n                      \\(       \
+      \     # Opening paren\n                        [ \\t]*+       # Optional whtiespace\n\
+      \                        <?(.*?)>?     # URL\n                        [ \\t]*+\
+      \       # Optional whtiespace\n                        (         # Optional\
+      \ Title\n                          (?<title>['\"])\n                       \
+      \   (.*?)\n                          \\k<title>\n                        )?\n\
+      \                      \\)\n                    )\n                  )\n   \
+      \             )\n                | \\1\\1                # Must be bold closer\n\
+      \                | (?!(?<=\\S)\\1).           # Everything besides\n       \
+      \                           # style closer\n              )++\n            \
+      \  (?<=\\S)\\1                # Close\n            )\n          "
+    captures:
+      '1':
+        name: punctuation.definition.italic.markdown
+    end: (?<=\S)(\1)((?!\1)|(?=\1\1))
+    name: justnotes.text.italic
+    patterns:
+    - applyEndPatternLast: 1
+      begin: (?=<[^>]*?>)
+      end: (?<=>)
+      patterns:
+      - include: text.html.basic
+    - include: '#escape'
+    - include: '#ampersand'
+    - include: '#bracket'
+    - include: '#raw'
+    - include: '#bold'
+    - include: '#strikethrough'
+    - include: '#image-inline'
+    - include: '#link-inline'
+    - include: '#link-inet'
+    - include: '#link-email'
+    - include: '#image-ref'
+    - include: '#link-ref-literal'
+    - include: '#link-ref'
+    - include: '#link-internal'
+  line-break:
+    match: ' {2,}$'
+    name: meta.dummy.line-break
+  link-email:
+    captures:
+      '1':
+        name: punctuation.definition.link.markdown
+      '2':
+        name: markup.underline.link.markdown
+      '4':
+        name: punctuation.definition.link.markdown
+    match: (<)?((?:mailto:)?[-.\w]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)(>)?
+    name: meta.link.email.lt-gt.markdown
+  link-inet:
+    captures:
+      '1':
+        name: punctuation.definition.link.markdown
+      '2':
+        name: markup.underline.link.markdown
+      '3':
+        name: punctuation.definition.link.markdown
+    match: (<)?(\b(?:https?|ftp|file|git):///?[^\s()<>\[\]]+)(>)?
+    name: meta.link.inet.markdown
+  link-inline:
+    captures:
+      '1':
+        name: punctuation.definition.string.begin.markdown
+      '10':
+        name: string.other.link.description.title.markdown
+      '11':
+        name: punctuation.definition.string.begin.markdown
+      '12':
+        name: punctuation.definition.string.end.markdown
+      '13':
+        name: string.other.link.description.title.markdown
+      '14':
+        name: punctuation.definition.string.begin.markdown
+      '15':
+        name: punctuation.definition.string.end.markdown
+      '16':
+        name: punctuation.definition.metadata.markdown
+      '2':
+        name: string.other.link.title.markdown
+      '4':
+        name: punctuation.definition.string.end.markdown
+      '5':
+        name: invalid.illegal.whitespace.markdown
+      '6':
+        name: punctuation.definition.metadata.markdown
+      '7':
+        name: punctuation.definition.link.markdown
+      '8':
+        name: markup.underline.link.markdown
+      '9':
+        name: punctuation.definition.link.markdown
+    match: "(?x:\n        (\\[)((?<square>[^\\[\\]\\\\]|\\\\.|\\[\\g<square>*+\\])*+)(\\\
+      ])\n                      # Match the link text.\n        ([ ])?           \
+      \ # Space not allowed\n        (\\()            # Opening paren for url\n  \
+      \        (<?)(.*?)(>?)     # The url\n          [ \\t]*          # Optional\
+      \ whitespace\n          (?:\n              ((\\().+?(\\)))   # Match title in\
+      \ parens\u2026\n            | ((\").+?(\"))   # or in quotes.\n          )?\
+      \            # Title is optional\n          \\s*           # Optional whitespace\n\
+      \        (\\))\n       )"
+    name: meta.link.inline.markdown
+  link-internal:
+    captures:
+      '1':
+        name: punctuation.definition.link.internal.begin.markdown.note
+      '2':
+        name: string.other.link.internal.title.markdown.note
+      '3':
+        name: punctuation.definition.link.internal.end.markdown.note
+    match: (?<![a-zA-Z0-9_])(\[\[)(?![\s])(.*?)?((?<![\s])\]\](?![a-zA-Z0-9_]))
+    name: meta.link.internal.markdown.note
+  link-ref:
+    captures:
+      '1':
+        name: punctuation.definition.string.begin.markdown
+      '2':
+        name: string.other.link.title.markdown
+      '4':
+        name: punctuation.definition.string.end.markdown
+      '5':
+        name: punctuation.definition.constant.begin.markdown
+      '6':
+        name: constant.other.reference.link.markdown
+      '7':
+        name: punctuation.definition.constant.end.markdown
+    match: (\[)((?<square>[^\[\]\\]|\\.|\[\g<square>*+\])*+)(\])[ ]?(\[)([^\]]*+)(\])
+    name: meta.link.reference.markdown
+  link-ref-literal:
+    captures:
+      '1':
+        name: punctuation.definition.string.begin.markdown
+      '2':
+        name: string.other.link.title.markdown
+      '4':
+        name: punctuation.definition.string.end.markdown
+      '5':
+        name: punctuation.definition.constant.begin.markdown
+      '6':
+        name: punctuation.definition.constant.end.markdown
+    match: (\[)((?<square>[^\[\]\\]|\\.|\[\g<square>*+\])*+)(\])[ ]?(\[)(\])
+    name: meta.link.reference.literal.markdown
+  note-tag:
+    captures:
+      '1':
+        name: string.other.note_tag.title.markdown.note
+      '2':
+        name: punctuation.definition.note_tag.markdown.note
+    match: "(?x)\n        ((?<=:)(?:\\w|[+-]\\w)[^: ]*)   # tag text should have :\
+      \ before it\n        (:(?=([^: ]+:)*\\s))   # the end dot\n      "
+    name: meta.note_tag.markdown.note
+  note-tag-begin:
+    match: ':(?=((?:\w|[+-]\w)[^: ]*:){1,}\s)'
+    name: punctuation.definition.note_tag.markdown.note
+  raw:
+    captures:
+      '1':
+        name: punctuation.definition.raw.markdown
+      '2':
+        name: markup.raw.inline.content.markdown
+      '3':
+        name: punctuation.definition.raw.markdown
+    match: "(?x)\n        (`+)\n        (\n          (?:\n            [^`]\n     \
+      \       | (?<=\\\\)[`]\n            | (?!(?<!`)\\1(?!`))`)*+\n        )\n  \
+      \      (\\1)\n      "
+    name: markup.raw.inline.markdown
+  separator:
+    match: \G[ ]{,3}([-*_])([ ]{,2}\1){2,}[ \t]*$\n?
+    name: meta.separator.markdown
+  strikethrough:
+    begin: "(?x)\n            (?<!\\w)(~~)(?=[^\\s~])                # Open\n    \
+      \        (?=\n              (\n                  <[^>]*+>             # HTML\
+      \ tags\n                | (?<raw>`+)([^`]|(?!(?<!`)\\k<raw>(?!`))`)*+\\k<raw>\n\
+      \                                  # Raw\n                | \\\\[\\\\`*_{}\\\
+      [\\]()#.!+\\->]?+     # Escapes\n                | \\[\n                (\n\
+      \                        (?<square>          # Named group\n               \
+      \       [^\\[\\]\\\\]       # Match most chars\n                          |\
+      \ \\\\.           # Escaped chars\n                          | \\[ \\g<square>*+\
+      \ \\]    # Nested brackets\n                        )*+\n                  \\\
+      ]\n                  (\n                    (             # Reference Link\n\
+      \                      [ ]?          # Optional space\n                    \
+      \  \\[[^\\]]*+\\]       # Ref name\n                    )\n                \
+      \    | (             # Inline Link\n                      \\(            # Opening\
+      \ paren\n                        [ \\t]*+       # Optional whtiespace\n    \
+      \                    <?(.*?)>?     # URL\n                        [ \\t]*+ \
+      \      # Optional whtiespace\n                        (         # Optional Title\n\
+      \                          (?<title>['\"])\n                          (.*?)\n\
+      \                          \\k<title>\n                        )?\n        \
+      \              \\)\n                    )\n                  )\n           \
+      \     )\n                | (?!(?<=\\S)\\1).           # Everything besides\n\
+      \                                  # style closer\n              )++\n     \
+      \       )\n          "
+    captures:
+      '1':
+        name: markup.strikethrough.markdown
+    end: (?<=\S)(\1)
+    name: markup.strikethrough.markdown
+    patterns:
+    - applyEndPatternLast: 1
+      begin: (?=<[^>]*?>)
+      end: (?<=>)
+      patterns:
+      - include: text.html.basic
+    - include: '#escape'
+    - include: '#ampersand'
+    - include: '#bracket'
+    - include: '#raw'
+    - include: '#bold'
+    - include: '#italic'
+    - include: '#image-inline'
+    - include: '#link-inline'
+    - include: '#link-inet'
+    - include: '#link-email'
+    - include: '#image-ref'
+    - include: '#link-ref-literal'
+    - include: '#link-ref'
+    - include: '#link-internal'
+  table:
+    begin: (?<=^|^ |^  |^   |\G)([\|\+])
+    beginCaptures:
+      '1':
+        name: punctuation.definition.table.vertical-line.markdown
+    end: ([\|\+])(?=[ \t]*$)
+    endCaptures:
+      '1':
+        name: punctuation.definition.table.vertical-line.markdown
+    name: markup.table.markdown
+    patterns:
+    - captures:
+        '1':
+          name: punctuation.definition.table.vertical-line.markdown
+      comment: "\n            finding table rows for marking the vertical bars\n \
+        \           do not follow | if it has -= at least 2\n          "
+      match: (\|)
+    - captures:
+        '1':
+          name: punctuation.definition.table.horizontal-line.markdown
+      match: (?<=[^\w])(?:[ ]+)?([-=+:]+(?=(?:[ ]?)[\|\+]))
+    - captures:
+        '1':
+          name: punctuation.definition.table.alignments.markdown
+      match: ([>#<]+(?=(?:[ ]?)[\|\+]))
+    - include: '#inline'
+  tag-critical:
+    match: "(?<=\\s)\\@critical|\u272Dcritical"
+    name: justnotes.tag.todo.critical
+  tag-high:
+    match: "(?<=\\s)\\@high|\u272Dhigh"
+    name: justnotes.tag.todo.high
+  tag-low:
+    match: "(?<=\\s)\\@low|\u272Dlow"
+    name: justnotes.tag.todo.low
+  tag-today:
+    match: "(?<=\\s)\\@today|\u272D\u1D1B\u1D0F\u1D05\u1D00\u028F"
+    name: justnotes.tag.todo.today
+  tag:
+    match: (?<=\s)\@(?!(high|today|critical|low|completed|done)[\s\(])[\w\d\.\(\)\-!?
+      :\+]+[ \t]*
+    name: justnotes.tag.todo
+  todoPending:
+    begin: "^\\s*(-|\u274D|\u2751|\u25A0|\u25A1|\u2610|\u25AA|\u25AB|\u2013|\u2014|\u2261\
+      |\u2192|\u203A|\\[\\s\\])(?=(\\s+(?:[^\\@\\n]|(?<![ \\t])\\@)*)(?!([^\\n]*)?(\\\
+      @done|\\@cancelled)[\\s\\(]))"
+    captures:
+      '1':
+        name: punctuation.definition.bullet.pending.todo
+    end: $
+    name: meta.item.todo.pending
+    patterns:
+    - include: '#escape'
+    - include: '#ampersand'
+    - include: '#bracket'
+    - include: '#raw'
+    - include: '#bold'
+    - include: '#italic'
+    - include: '#strikethrough'
+    - include: '#line-break'
+    - include: '#image-inline'
+    - include: '#link-inline'
+    - include: '#link-inet'
+    - include: '#link-email'
+    - include: '#link-internal'
+    - include: '#image-ref'
+    - include: '#link-ref-literal'
+    - include: '#link-ref'
+    - include: '#note-tag'
+    - include: '#note-tag-begin'
+    - include: '#altHeader'
+    - include: '#uList'
+    - include: '#tag-critical'
+    - include: '#tag-high'
+    - include: '#tag-low'
+    - include: '#tag'
+    - include: '#tag-today'
+  todoCompleted:
+    captures:
+      '1':
+        name: justnotes.bullet.completed
+      '2':
+        name: justnotes.item.todo.completed
+      '3':
+        name: justnotes.tag.todo.completed
+      '4':
+        name: justnotes.bullet.completed
+      '5':
+        name: justnotes.item.todo.completed
+      '6':
+        name: justnotes.tag.todo.completed
+    name: meta.item.todo.completed
+    match: "^\\s*(?:(\\+|\u2713|\u2714|\u2611|\u221A|\\[x\\])(\\s+(?:[^\\@\\n]|(?<!\\\
+      s)\\@|\\@(?=\\s))*)([^\\n]*))|^\\s*(?:(-)(\\s+(?:[^\\@]|(?<!\\s)\\@|\\@(?=\\s))*)(.*\\\
+      @done(?=\\s|\\(|$)[^\\n]*))"
+  todoCancelled:
+    captures:
+      '1':
+        name: justnotes.bullet.todo.cancelled
+      '2':
+        name: justnotes.item.todo.cancelled
+      '3':
+        name: justnotes.tag.todo.cancelled
+      '4':
+        name: justnotes.bullet.todo.cancelled
+      '5':
+        name: justnotes.item.todo.cancelled
+      '6':
+        name: justnotes.tag.todo.cancelled
+    match: "^\\s*(?:(\u2718|x|\\[-\\])(\\s+(?:[^\\@\\n]|(?<!\\s)\\@|\\@(?=\\s))*)(.*))|^\\\
+      s*(?:(-)(\\s+(?:[^\\@]|(?<!\\s)\\@|\\@(?=\\s))*)(.*\\@cancelled(?=\\s|\\(|$)[^\\\
+      n]*))"
+    name: meta.item.todo.cancelled
+scopeName: text.note
+uuid: 49ac9564-2ff8-4b9f-a3ab-cb8a33b8c5ec
