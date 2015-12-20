@@ -969,13 +969,19 @@ settings:
 - name: JustNotes Tag Today
   scope: justnotes.tag.todo.today
   settings:
-    background: '#222222'
+    background: '#66D9EF'
     fontStyle: bold
-    foreground: '#AE81FF'
+    foreground: '#000000'
 - name: JustNotes Tag High
   scope: justnotes.tag.todo.high
   settings:
     background: '#FF7F00'
+    fontStyle: bold
+    foreground: '#000000'
+- name: JustNotes Tag Now
+  scope: justnotes.tag.todo.now
+  settings:
+    background: '#A6E22E'
     fontStyle: bold
     foreground: '#000000'
 - name: JustNotes Tag Low 
@@ -994,4 +1000,12 @@ settings:
   scope: justnotes.text.italic
   settings:
     foreground: '#7c7865'
+- name: JustNotes altHeader
+  scope: justnotes.text.altheader
+  settings:
+    foreground: '#66D9EF'
+- name: JustNotes Inline Code
+  scope: justnotes.text.inlinecode
+  settings:
+    background: '#1E1F1B'
 uuid: 1D07ACC0-832F-11E2-9E96-0800200C9A66

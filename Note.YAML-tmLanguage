@@ -728,7 +728,6 @@ patterns:
   name: meta.block-level.markdown
   patterns:
   - include: '#block_quote'
-  # - include: '#block_raw'
   - include: '#headings'
   - include: '#separator'
   - include: '#table'
@@ -939,7 +938,6 @@ repository:
         patterns:
         - include: $self
         - include: '#inline'
-        # - include: '#block_raw'
         - include: '#headings'
         - include: '#separator'
         - begin: "(?x)\n                    \\G[ ]{0,3}([*+-])([ ]\\[([ xX\u2718\u2714\
@@ -998,21 +996,16 @@ repository:
         name: markup.list
         patterns:
         - include: '#list-paragraph'
-      # - include: '#block_raw'
-      - include: '#table'
-      - include: '#headings'
-      - include: '#separator'
-      - include: '#inline'
-      - include: text.html.basic
+        - include: '#table'
+        - include: '#headings'
+        - include: '#separator'
+        - include: '#inline'
+        - include: text.html.basic
   ampersand:
     comment: "\n        Markdown will convert this for us. We match it so that the\n\
       \        HTML grammar will not mark it up as invalid.\n      "
     match: '&(?!([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+);)'
     name: meta.other.valid-ampersand.markdown
-  altHeader:
-    comment: Заголовки с двоедочием
-    match: (^\s*[^\s=#].*\:)$
-    name: markup.quote.markdown
   brackets:
     comment: Скобочки
     match: ([\(\)])
@@ -1045,7 +1038,6 @@ repository:
         \            )"
       end: ^
       patterns:
-      # - include: '#block_raw'
       - include: '#headings'
       - include: '#separator'
     - begin: "(?x)\\G\n            (?! $\n            | [ ]{,3}>\n            | ([\
@@ -1111,9 +1103,6 @@ repository:
         match: \G[ ]{0,3}([0-9]+)(\.)\s+(.+)$
       - include: '#inline'
       - include: text.html.basic
-  block_raw:
-    match: \G([ ]{4}|\t).*$\n?
-    name: markup.raw.block.markdown
   bold:
     begin: "(?x)\n            (?<![a-zA-Z0-9])(\\*\\*|__)(?=\\S)                #\
       \ Open\n            (?=\n              (\n                  <[^>]*+>       \
@@ -1315,13 +1304,13 @@ repository:
     - include: '#link-ref'
     - include: '#note-tag'
     - include: '#note-tag-begin'
-    - include: '#altHeader'
     - include: '#uList'
     - include: '#tag-critical'
     - include: '#tag-high'
     - include: '#tag-low'
     - include: '#tag'
     - include: '#tag-today'
+    - include: '#tag-now'
     - include: '#todoCompleted'
     - include: '#todoCancelled'
     - include: '#todoPending'
@@ -1495,13 +1484,13 @@ repository:
       '1':
         name: punctuation.definition.raw.markdown
       '2':
-        name: markup.raw.inline.content.markdown
+        name: justnotes.text.inlinecode
       '3':
         name: punctuation.definition.raw.markdown
     match: "(?x)\n        (`+)\n        (\n          (?:\n            [^`]\n     \
       \       | (?<=\\\\)[`]\n            | (?!(?<!`)\\1(?!`))`)*+\n        )\n  \
       \      (\\1)\n      "
-    name: markup.raw.inline.markdown
+    name: justnotes.text.inlinecode
   separator:
     match: \G[ ]{,3}([-*_])([ ]{,2}\1){2,}[ \t]*$\n?
     name: meta.separator.markdown
@@ -1589,10 +1578,13 @@ repository:
     match: "(?<=\\s)\\@low|\u272Dlow"
     name: justnotes.tag.todo.low
   tag-today:
-    match: "(?<=\\s)\\@today|\u272D\u1D1B\u1D0F\u1D05\u1D00\u028F"
+    match: "(?<=\\s)\\@today|\u272Dtoday"
     name: justnotes.tag.todo.today
+  tag-now:
+    match: "(?<=\\s)\\@now|\u272Dnow"
+    name: justnotes.tag.todo.now
   tag:
-    match: (?<=\s)\@(?!(high|today|critical|low|completed|done)[\s\(])[\w\d\.\(\)\-!?
+    match: (?<=\s)\@(?!(high|today|critical|low|completed|done|now)[\s\(])[\w\d\.\(\)\-!?
       :\+]+[ \t]*
     name: justnotes.tag.todo
   todoPending:
@@ -1623,13 +1615,13 @@ repository:
     - include: '#link-ref'
     - include: '#note-tag'
     - include: '#note-tag-begin'
-    - include: '#altHeader'
     - include: '#uList'
     - include: '#tag-critical'
     - include: '#tag-high'
     - include: '#tag-low'
     - include: '#tag'
     - include: '#tag-today'
+    - include: '#tag-now'
   todoCompleted:
     captures:
       '1':

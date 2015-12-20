@@ -2562,40 +2562,31 @@
 									<key>include</key>
 									<string>#list-paragraph</string>
 								</dict>
+								<dict>
+									<key>include</key>
+									<string>#table</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#headings</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#separator</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#inline</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>text.html.basic</string>
+								</dict>
 							</array>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#table</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#headings</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#separator</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#inline</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>text.html.basic</string>
 						</dict>
 					</array>
 				</dict>
 			</array>
-		</dict>
-		<key>altHeader</key>
-		<dict>
-			<key>comment</key>
-			<string>Заголовки с двоедочием</string>
-			<key>match</key>
-			<string>(^\s*[^\s=#].*\:)$</string>
-			<key>name</key>
-			<string>markup.quote.markdown</string>
 		</dict>
 		<key>ampersand</key>
 		<dict>
@@ -2846,13 +2837,6 @@
 					</array>
 				</dict>
 			</array>
-		</dict>
-		<key>block_raw</key>
-		<dict>
-			<key>match</key>
-			<string>\G([ ]{4}|\t).*$\n?</string>
-			<key>name</key>
-			<string>markup.raw.block.markdown</string>
 		</dict>
 		<key>bold</key>
 		<dict>
@@ -3416,10 +3400,6 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#altHeader</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#uList</string>
 				</dict>
 				<dict>
@@ -3441,6 +3421,10 @@
 				<dict>
 					<key>include</key>
 					<string>#tag-today</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#tag-now</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -3885,7 +3869,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>markup.raw.inline.content.markdown</string>
+					<string>justnotes.text.inlinecode</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -3905,7 +3889,7 @@
         (\1)
       </string>
 			<key>name</key>
-			<string>markup.raw.inline.markdown</string>
+			<string>justnotes.text.inlinecode</string>
 		</dict>
 		<key>separator</key>
 		<dict>
@@ -4120,7 +4104,7 @@
 		<key>tag</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=\s)\@(?!(high|today|critical|low|completed|done)[\s\(])[\w\d\.\(\)\-!? :\+]+[ \t]*</string>
+			<string>(?&lt;=\s)\@(?!(high|today|critical|low|completed|done|now)[\s\(])[\w\d\.\(\)\-!? :\+]+[ \t]*</string>
 			<key>name</key>
 			<string>justnotes.tag.todo</string>
 		</dict>
@@ -4145,10 +4129,17 @@
 			<key>name</key>
 			<string>justnotes.tag.todo.low</string>
 		</dict>
+		<key>tag-now</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=\s)\@now|✭now</string>
+			<key>name</key>
+			<string>justnotes.tag.todo.now</string>
+		</dict>
 		<key>tag-today</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=\s)\@today|✭ᴛᴏᴅᴀʏ</string>
+			<string>(?&lt;=\s)\@today|✭today</string>
 			<key>name</key>
 			<string>justnotes.tag.todo.today</string>
 		</dict>
@@ -4324,10 +4315,6 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#altHeader</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#uList</string>
 				</dict>
 				<dict>
@@ -4349,6 +4336,10 @@
 				<dict>
 					<key>include</key>
 					<string>#tag-today</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#tag-now</string>
 				</dict>
 			</array>
 		</dict>

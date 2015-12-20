@@ -2374,11 +2374,11 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#222222</string>
+				<string>#66D9EF</string>
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#AE81FF</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 		<dict>
@@ -2390,6 +2390,21 @@
 			<dict>
 				<key>background</key>
 				<string>#FF7F00</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JustNotes Tag Now</string>
+			<key>scope</key>
+			<string>justnotes.tag.todo.now</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#A6E22E</string>
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
@@ -2435,6 +2450,28 @@
 			<dict>
 				<key>foreground</key>
 				<string>#7c7865</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JustNotes altHeader</string>
+			<key>scope</key>
+			<string>justnotes.text.altheader</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#66D9EF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JustNotes Inline Code</string>
+			<key>scope</key>
+			<string>justnotes.text.inlinecode</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#1E1F1B</string>
 			</dict>
 		</dict>
 	</array>
