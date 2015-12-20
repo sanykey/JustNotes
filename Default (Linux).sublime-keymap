@@ -1,24 +1,22 @@
 [
-  // General Keymaps
+  // JustNote General Keymaps
   { "keys": ["f4"],       "command": "notes_list"   },
   { "keys": ["ctrl+f4"],  "command": "notes_buffer" },
   { "keys": ["super+f4"], "command": "notes_new"    },
   { "keys": ["f1"],       "command": "jotter"       },
 
-  // Notes: Index keymaps
+  // JustNote: Index keymaps
   { "keys": ["enter"], "command": "notes_buffer_open", "context":
     [{ "key": "selector", "operator": "equal", "operand": "text.notes_buffer" }]
   },
-
   { "keys": ["enter"], "command": "note_open_url", "context":
     [{ "key": "selector", "operator": "equal", "operand": "text.note meta.link.inline.markdown | text.note meta.link.inet.markdown | text.note meta.link.reference.def.markdown" }]
   },
-
   { "keys": ["enter"], "command": "note_preview_image", "context":
     [{ "key": "selector", "operator": "equal", "operand": "text.note meta.image.inline.markdown" }]
   },
 
-  // Notes: Jotter keymaps
+  // JustNote: Jotter keymaps
   { "keys": ["escape"], "command": "save_jot_and_hide_panel", "context":
     [
       { "key": "panel_visible", "operator": "equal", "operand": true },
@@ -26,22 +24,25 @@
     ]
   },
 
-  // Note Extra Features: TODO and HEADING FOLDING
+  // JustNote: heading folding
   { "keys": ["tab"], "command": "note_smart_folding", "context":
     [{ "key": "selector", "operator": "equal", "operand": "(markup.heading.1.markdown.note | markup.heading.2.markdown.note | markup.heading.3.markdown.note| markup.heading.4.markdown.note| markup.heading.5.markdown.note| markup.heading.6.markdown.note)" }]
   },
-
   { "keys": ["super+ctrl+alt+-"], "command": "note_global_folding", "context":
     [{ "key": "selector", "operator": "equal", "operand": "text.note" } ]
   },
-
   { "keys": ["ctrl+enter"], "command": "note_smart_new_line", "context":
     [{ "key": "selector", "operator": "equal", "operand": "(markup.heading.1.markdown.note | markup.heading.2.markdown.note | markup.heading.3.markdown.note| markup.heading.4.markdown.note| markup.heading.5.markdown.note| markup.heading.6.markdown.note)" } ]
   },
-  // Tasks
+
+  // JustNote: Tasks
   { "keys": ["ctrl+d"], "command": "justnotes_complete_task","context": [{ "key": "selector", "operator": "equal", "operand": "text.note" }] },
   { "keys": ["alt+c"], "command": "justnotes_cancel_task", "context": [{"key": "selector", "operator": "equal", "operand": "text.note" }] },
   { "keys": ["ctrl+enter"], "command": "justnotes_new_task","context": [{ "key": "selector", "operator": "equal", "operand": "text.note" }] },
   { "keys": ["ctrl+i"], "command": "justnotes_new_task","context": [{ "key": "selector", "operator": "equal", "operand": "text.note" }] },
+  // JustNote: Tasks (cyrillic)
+  { "keys": ["ctrl+в"], "command": "justnotes_complete_task","context": [{ "key": "selector", "operator": "equal", "operand": "text.note" }] },
+  { "keys": ["alt+с"], "command": "justnotes_cancel_task", "context": [{"key": "selector", "operator": "equal", "operand": "text.note" }] },
+  { "keys": ["ctrl+ш"], "command": "justnotes_new_task","context": [{ "key": "selector", "operator": "equal", "operand": "text.note" }] },
 
 ]
